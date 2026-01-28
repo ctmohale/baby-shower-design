@@ -121,12 +121,21 @@ const Entry = () => {
                 A Heartfelt Message
               </h4>
               <p className="text-lg text-muted-foreground leading-relaxed italic">
-                To our dear friends, family, and colleagues — your love,
-                support, and presence mean the world to us. We are grateful for
-                every kind word, shared laugh, and thoughtful gesture as we
-                celebrate this new chapter. Thank you for being part of our
-                story and for helping us welcome this little one with open
-                hearts.
+                To our dear friends, family, and colleagues — we warmly invite
+                you to celebrate this special new chapter with us. Your love,
+                support, and presence mean the world to us, and we would be
+                honored to share this joyful moment as we prepare to welcome our
+                little one.
+              </p>
+            </div>
+          </section>
+
+          {/* Attire Section */}
+          <section className="mb-6">
+            <h3 className="text-lg font-medium mb-2">Attire</h3>
+            <div className="prose text-sm text-muted-foreground">
+              <p>
+                <strong>Suggested:</strong> Blue &amp; White
               </p>
             </div>
           </section>

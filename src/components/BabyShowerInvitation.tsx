@@ -1,5 +1,6 @@
 import babyElephant from "@/assets/baby-elephant.png";
 import floralCorner from "@/assets/floral-corner.png";
+import { MapPin, MessageCircle } from "lucide-react";
 
 interface InvitationProps {
   motherName?: string;
@@ -22,6 +23,10 @@ const BabyShowerInvitation = ({
   rsvpContact = "Angela",
   rsvpPhone = "355.345.1234",
 }: InvitationProps) => {
+  const fullAddress = `${venue}, ${address}`;
+  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`;
+  const whatsappUrl = `https://wa.me/${rsvpPhone.replace(/\D/g, '')}?text=${encodeURIComponent(`Hi ${rsvpContact}! I would like to RSVP for ${motherName}'s baby shower on ${date} ${dayNumber}.`)}`;
+
   return (
     <div className="relative w-full max-w-lg mx-auto">
       {/* Main Card */}
@@ -115,20 +120,42 @@ const BabyShowerInvitation = ({
             </div>
           </div>
 
-          {/* Venue Details */}
-          <div className="space-y-1 mb-4">
-            <p className="font-body text-sm font-semibold tracking-wider text-foreground uppercase">
-              {venue}
-            </p>
-            <p className="font-body text-xs tracking-wide text-muted-foreground">
+          {/* Venue Details - Clickable for directions */}
+          <a 
+            href={googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block space-y-1 mb-4 group cursor-pointer hover:scale-105 transition-transform duration-200"
+          >
+            <div className="flex items-center justify-center gap-1.5">
+              <MapPin className="w-4 h-4 text-primary" />
+              <p className="font-body text-sm font-semibold tracking-wider text-foreground uppercase group-hover:text-primary transition-colors">
+                {venue}
+              </p>
+            </div>
+            <p className="font-body text-xs tracking-wide text-muted-foreground group-hover:text-primary/80 transition-colors">
               {address}
             </p>
-          </div>
+            <p className="font-body text-[10px] text-primary underline">
+              Tap for directions
+            </p>
+          </a>
 
           {/* RSVP */}
-          <p className="font-body text-xs tracking-wide text-muted-foreground">
+          <p className="font-body text-xs tracking-wide text-muted-foreground mb-4">
             RSVP to {rsvpContact} at {rsvpPhone}
           </p>
+
+          {/* RSVP Button */}
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-body text-sm font-medium px-6 py-3 rounded-full transition-all duration-200 hover:scale-105 shadow-md hover:shadow-lg"
+          >
+            <MessageCircle className="w-4 h-4" />
+            RSVP via WhatsApp
+          </a>
         </div>
       </div>
     </div>

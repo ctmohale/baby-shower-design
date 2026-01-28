@@ -25,7 +25,11 @@ const BabyShowerInvitation = ({
 }: InvitationProps) => {
   const fullAddress = `${venue}, ${address}`;
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`;
-  const whatsappUrl = `https://wa.me/${rsvpPhone.replace(/\D/g, '')}?text=${encodeURIComponent(`Hi ${rsvpContact}! I would like to RSVP for ${motherName}'s baby shower on ${date} ${dayNumber}.`)}`;
+  
+  // Convert phone to international format (SA numbers: 0xx -> 27xx)
+  const phoneDigits = rsvpPhone.replace(/\D/g, '');
+  const internationalPhone = phoneDigits.startsWith('0') ? '27' + phoneDigits.slice(1) : phoneDigits;
+  const whatsappUrl = `https://wa.me/${internationalPhone}?text=${encodeURIComponent(`Hi ${rsvpContact}! I would like to RSVP for ${motherName}'s baby shower on ${date} ${dayNumber}.`)}`;
 
   return (
     <div className="relative w-full max-w-lg mx-auto">

@@ -226,7 +226,7 @@ const Index = () => {
               </header>
 
               <BabyShowerInvitation
-                motherName="Bella Smith"
+                motherName="Lufuno Negogogo"
                 date="Saturday February"
                 dayNumber="28"
                 time="2:30 PM"

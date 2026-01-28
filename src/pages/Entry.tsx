@@ -2,8 +2,6 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import watercolorStroke from "@/assets/watercolor-stroke.png";
 import grokVideo from "@/assets/grok-video.mp4";
-import floralCorner from "@/assets/floral-corner.png";
-import babyElephant from "@/assets/baby-elephant.png";
 
 const Entry = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -118,13 +116,17 @@ const Entry = () => {
           </header>
 
           <section className="mb-6">
-            <div className="mx-auto max-w-3xl px-6 py-5 bg-gradient-to-r from-sky-50 via-blue-50 to-white rounded-xl shadow-sm border border-white/60 text-center">
-              <img src={babyElephant} alt="Baby elephant" className="mx-auto w-24 h-24 mb-3" />
+            <div className="mx-auto max-w-3xl px-6 py-5 bg-gradient-to-r from-sky-50 via-blue-50 to-white rounded-xl shadow-sm border border-white/60">
               <h4 className="text-xl font-script text-sky-700 mb-2">
                 A Heartfelt Message
               </h4>
               <p className="text-lg text-muted-foreground leading-relaxed italic">
-                To our dear friends, family, and colleagues — your love, support, and presence mean the world to us. We are grateful for every kind word, shared laugh, and thoughtful gesture as we celebrate this new chapter. Thank you for being part of our story and for helping us welcome this little one with open hearts.
+                To our dear friends, family, and colleagues — your love,
+                support, and presence mean the world to us. We are grateful for
+                every kind word, shared laugh, and thoughtful gesture as we
+                celebrate this new chapter. Thank you for being part of our
+                story and for helping us welcome this little one with open
+                hearts.
               </p>
             </div>
           </section>
@@ -137,13 +139,13 @@ const Entry = () => {
                 (prices shown) or contact the host for delivery details.
               </p>
               <ul>
-                <li className="font-semibold text-yellow-500">
-                  Gift registry: {" "}
+                <li>
+                  Gift registry:{" "}
                   <a
                     href="https://www.takealot.com/wishlist/0/detail/1"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline"
+                    className="text-sky-600 underline"
                   >
                     Takealot wishlist — view gift prices
                   </a>

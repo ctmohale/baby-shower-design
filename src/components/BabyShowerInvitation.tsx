@@ -29,12 +29,12 @@ const BabyShowerInvitation = ({
         {/* Watercolor wash background effect */}
         <div className="absolute top-0 left-0 right-0 h-32 watercolor-wash opacity-60" />
         
-        {/* Gold sparkle decorations */}
-        <div className="absolute top-20 left-1/4 w-2 h-2 gold-sparkle rounded-full opacity-70" />
-        <div className="absolute top-32 right-1/3 w-1.5 h-1.5 gold-sparkle rounded-full opacity-60" />
-        <div className="absolute top-48 left-1/3 w-1 h-1 gold-sparkle rounded-full opacity-50" />
-        <div className="absolute top-60 right-1/4 w-2 h-2 gold-sparkle rounded-full opacity-70" />
-        <div className="absolute bottom-40 left-1/4 w-1.5 h-1.5 gold-sparkle rounded-full opacity-60" />
+        {/* Gold sparkle decorations with pulse animation */}
+        <div className="absolute top-20 left-1/4 w-2 h-2 gold-sparkle rounded-full animate-sparkle" style={{ animationDelay: '0s' }} />
+        <div className="absolute top-32 right-1/3 w-1.5 h-1.5 gold-sparkle rounded-full animate-sparkle" style={{ animationDelay: '0.3s' }} />
+        <div className="absolute top-48 left-1/3 w-1 h-1 gold-sparkle rounded-full animate-sparkle" style={{ animationDelay: '0.6s' }} />
+        <div className="absolute top-60 right-1/4 w-2 h-2 gold-sparkle rounded-full animate-sparkle" style={{ animationDelay: '0.9s' }} />
+        <div className="absolute bottom-40 left-1/4 w-1.5 h-1.5 gold-sparkle rounded-full animate-sparkle" style={{ animationDelay: '1.2s' }} />
         
         {/* Top left floral decoration */}
         <div className="absolute -top-8 -left-8 w-40 h-40 opacity-90">
@@ -64,8 +64,8 @@ const BabyShowerInvitation = ({
             is on the way!
           </p>
 
-          {/* Baby Elephant */}
-          <div className="relative w-36 h-36 mx-auto mb-4">
+          {/* Baby Elephant with gentle float animation */}
+          <div className="relative w-36 h-36 mx-auto mb-4 animate-gentle-float">
             <img
               src={babyElephant}
               alt="Baby elephant"

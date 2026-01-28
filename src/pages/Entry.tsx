@@ -151,7 +151,7 @@ const Entry = () => {
                 <li>
                   Gift registry:{" "}
                   <a
-                    href="https://www.takealot.com/wishlist/0/detail/1"
+                    href="https://www.takealot.com/wishlist/shared/1:fe93bf1d631343cd8b71ee5920ecf1bf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sky-600 underline"
